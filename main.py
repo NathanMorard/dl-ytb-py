@@ -116,6 +116,8 @@ ydl_opts = {
     'audioformat': 'mp3',
     'keepvideo': False,
     'addmetadata': True,
+    'ignoreerrors': True,
+
 
     'postprocessors': [{
         'key': 'FFmpegExtractAudio',
@@ -129,6 +131,7 @@ ydl_opts = {
         lambda d: print(f"État: {d['status']} | Fichier: {d.get('filename', '')}")
     ]
 }
+
 
 #Exécuter le téléchargement
 try:
